@@ -41,6 +41,7 @@ Core robot models in `assets/` directory:
 - Kuavo S45 (`kuavo_s45`) - 28 DOF humanoid
 - HighTorque Hi (`hightorque_hi`) - 25 DOF humanoid
 - Galaxea R1 Pro (`galaxea_r1pro`) - 24 DOF wheeled humanoid
+- Sprout (`sprout`) - 27 DOF small humanoid with grippers (SMPL-X + LAFAN1 BVH)
 
 Additional models retained in ROBOT_BASE_DICT for compatibility:
 - `unitree_g1_with_hands` (43 DOF with dexterous hands)
