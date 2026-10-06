@@ -4,7 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Installation and Setup
 
-This is a Python package for motion retargeting to humanoid robots. Install in development mode:
+This is a Python package for motion retargeting to humanoid robots. Install with uv (uses `pyproject.toml` + `uv.lock`, Python 3.10 via `.python-version`):
+
+```bash
+uv sync --all-extras   # or plain `uv sync` for core deps only; `--extra viser` for the viser viewer
+uv run python scripts/smplx_to_robot.py ...
+```
+
+Or with conda + pip in development mode:
 
 ```bash
 conda create -n gmr python=3.10 -y

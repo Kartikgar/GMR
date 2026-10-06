@@ -183,6 +183,32 @@ This repo is licensed under the [MIT License](LICENSE).
 > [!NOTE]
 > The code is tested on Ubuntu 22.04/20.04.
 
+### Option A: uv (recommended)
+
+Install [uv](https://docs.astral.sh/uv/) if you don't have it:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Then create the virtual environment and install GMR (Python 3.10 is pinned via `.python-version`; versions come from `uv.lock`):
+
+```bash
+uv sync                    # core dependencies
+uv sync --extra viser      # + browser-based viewer (scripts/viser_robot_motion.py)
+uv sync --all-extras       # + dataset scripts, plotting, Xsens tools, viser
+```
+
+Run scripts inside the environment with `uv run`, e.g.:
+
+```bash
+uv run python scripts/smplx_to_robot.py --smplx_file <path> --robot sprout --save_path <output.pkl>
+```
+
+Or activate it with `source .venv/bin/activate`.
+
+### Option B: conda + pip
+
 First create your conda environment:
 
 ```bash
